@@ -1,0 +1,23 @@
+name = "rpics"
+compatibility_date = "2024-04-22"
+compatibility_flags = ["nodejs_compat"]
+main = 'src/index.ts'
+
+[vars]
+BUCKET_BASE = '...'
+TOKEN = '...'
+BUCKET_IMAGE_PATH = 'img'
+BUCKET_CACHE_PATH = 'cache'
+BUCKET_PROC_CACHE = 'proc_cache'
+
+[[r2_buckets]]
+binding = 'BUCKET'
+bucket_name = 'rpics'
+
+[[d1_databases]]
+binding = "DB"
+database_name = "rpics-db"
+database_id = "..."
+
+[placement]
+mode = "smart"
